@@ -52,7 +52,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: yourdockeruser/n8n:latest, yourdockeruser/n8n:${{ needs.check-version.outputs.latest_version }}
+          tags: abierwirth/n8n:latest, abierwirth/n8n:${{ needs.check-version.outputs.latest_version }}
 
       - name: Create release (optional)
         run: |
