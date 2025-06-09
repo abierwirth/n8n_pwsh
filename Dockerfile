@@ -19,7 +19,7 @@ RUN apk add --no-cache \
       curl
 
 # Install PowerShell
-RUN curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell-7.4.1-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz && \
+RUN curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.2.14/powershell-7.2.14-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz && \
     mkdir -p /opt/microsoft/powershell/7 && \
     tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 && \
     ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh && \
