@@ -1,5 +1,7 @@
 FROM n8nio/n8n:latest
 
+USER root
+
 # Install dependencies and PowerShell (manually for Alpine)
 RUN apk add --no-cache \
       ca-certificates \
@@ -25,3 +27,5 @@ RUN curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/po
 
 # Optional: set pwsh as the default shell
 SHELL ["/bin/sh", "-c"]
+
+USER node
